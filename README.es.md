@@ -1,6 +1,6 @@
 # WorldForge Standard — generador de mapas para Arma Reforger
 
-> Versión Standard: mapas procedurales **sin límites**. La versión Premium añade calcar sitios reales desde un mapa (ver abajo).
+> Versión Standard: mapas procedurales **sin límites**. La versión Support añade calcar sitios reales desde un mapa (ver abajo).
 
 ## ▶ Tu primer mapa en 3 minutos
 
@@ -19,11 +19,11 @@ No copia el `.terr` de nadie: lo escribe entero desde cero con GUIDs propios que
 ![Ejemplo procedural](assets/images/preview-procedural.png)
 *Isla templada 8 km desde `recipes/everon_like.json`.*
 
-## Standard vs Premium — con imágenes
+## Standard vs Support — con imágenes
 
 ### Standard: procedural + imagen tuya (incluido aquí)
 
-- **5 caminos en Empezar:** Mapa aleatorio · Desde plantilla (13) · Procedural a medida · Desde una imagen tuya · (los 2 de sitio real son Premium y se enseñan con etiqueta).
+- **5 caminos en Empezar:** Mapa aleatorio · Desde plantilla (13) · Procedural a medida · Desde una imagen tuya · (los 2 de sitio real son Support y se enseñan con etiqueta).
 - **13 plantillas en `recipes/`:** `everon_like`, `arland_like`, `archipelago`, `valle_montana`, `alta_montana`, `arid_plateau`, `costa_urbana`, `interior_agricola`, `bosque_cerrado`, `peninsula`, `isla_grande`, `montane_valley`, `texas_like`.
 - **Modo imagen:** tu PNG/JPG define costa y arbolado; si añades relieve en grises, también la cota.
 - **Todo el pipeline:** Vista previa, Construir, Cocinar (Workbench por CLI: shore map, ríos, generadores, `.topo`, navmesh triple, BSP), Preflight, Catálogo, Herramientas, Documentación.
@@ -31,24 +31,24 @@ No copia el `.terr` de nadie: lo escribe entero desde cero con GUIDs propios que
 
 Capturas reales del programa (tema oscuro, en castellano):
 
-- `assets/images/standard-empezar.png` — Empezar (los 2 caminos Premium con etiqueta)
+- `assets/images/standard-empezar.png` — Empezar (los 2 caminos Support con etiqueta)
 - `assets/images/standard-recetas.png` — Recetas (plantillas + detalle JSON)
 - `assets/images/standard-editor.png` — Editor de receta (Verdania cargada)
 - `assets/images/standard-preview.png` — Vista previa
 - `assets/images/standard-build.png` — Construir
-- `assets/images/standard-realista-bloqueado.png` — lo que ve Standard en Mapa realista (cartel Premium)
+- `assets/images/standard-realista-bloqueado.png` — lo que ve Standard en Mapa realista (cartel Support)
 
-### Premium: mapa realista (elige la zona en el mapa)
+### Support: mapa realista (elige la zona en el mapa)
 
-![Premium mapa realista](assets/images/premium-mapa-realista.png)
+![Support mapa realista](assets/images/support-mapa-realista.png)
 *Pantalla Mapa realista capturada del programa: arrastra para mover, rueda para acercar, el cuadrado naranja es tu mapa. Derecha: Ir a, Tamaño, Límite y “Crear la receta y previsualizar”.*
 
 - **Fuentes reales:** relieve Copernicus DEM, cobertura ESA WorldCover, carreteras + cauces + usos + huellas de edificios de OpenStreetMap (~10.000 casas en 8 km de ciudad, planta y giro reales). Satelital Sentinel-2 para el color.
 - **Tamaños:** 2×2, 4×4, 8×8 (recomendado), 12×12, 16×16 km. A 8 km ya cabe ciudad + comarca; cocinar crece con el cuadrado del lado.
 - **Borde:** Automático (interior=tierra, costa=agua), Rodear de agua, Tierra hasta el borde (se ve el corte — normal en Reforger).
-- **En Standard** esta pantalla muestra el cartel “Calcar un sitio real es de Premium” y te manda a plantillas/procedural. No es una pared: te dice qué sí puedes hacer hoy.
+- **En Standard** esta pantalla muestra el cartel “Calcar un sitio real es de Support” y te manda a plantillas/procedural. No es una pared: te dice qué sí puedes hacer hoy.
 
-| | Standard | Premium |
+| | Standard | Support |
 |---|---|---|
 | Procedural (13 plantillas, biomas, relieve, pueblos) | ✅ | ✅ |
 | Modo imagen (tu satelital → costa y arbolado) | ✅ | ✅ |
@@ -113,9 +113,9 @@ Receta mínima:
 
 Castellano por defecto, inglés incluido. Auto desde Windows, en Ajustes se cambia (relanza).
 
-## Premium
+## Support
 
-Standard + sitio real + `.wrp`. Pide `worldforge.lic` junto al `.exe`. Para pedirlo abre un Issue “Premium”.
+Standard + sitio real + `.wrp`. Pide `worldforge.lic` junto al `.exe`. Para pedirlo abre un Issue “Support”.
 
 ## Licencia
 

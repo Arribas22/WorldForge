@@ -21,7 +21,7 @@ From a JSON recipe to a Workbench-ready addon: baked terrain, properly-profiled 
 
 De la receta al addon, paso a paso. / From recipe to addon, step by step.
 
-**[⬇ Descargar en Releases](../../releases)** · **[🚀 Quickstart](#-3-pasos--3-steps)** · **[Standard vs Premium](#-standard-vs-premium)** · **[Recetas](#-recetas--templates)**
+**[⬇ Descargar en Releases](../../releases)** · **[🚀 Quickstart](#-3-pasos--3-steps)** · **[Standard vs Support](#-standard-vs-support)** · **[Recetas](#-recetas--templates)**
 
 ---
 
@@ -39,9 +39,9 @@ De la receta al addon, paso a paso. / From recipe to addon, step by step.
 
 ---
 
-## 🔃 Standard vs Premium
+## 🔃 Standard vs Support
 
-| | Standard (este repo / this repo) | Premium |
+| | Standard (este repo / this repo) | Support |
 |---|---|---|
 | Procedural ilimitado + 13 plantillas / Unlimited procedural + 13 templates | ✅ | ✅ |
 | Modo imagen (tu satelital → costa y arbolado) / Image mode | ✅ | ✅ |
@@ -65,14 +65,14 @@ De la receta al addon, paso a paso. / From recipe to addon, step by step.
 *Editor de receta con Verdania cargada: cada campo con ayuda, comprobación en vivo y resumen de lo que va a salir.*
 *Recipe editor with Verdania loaded: every field with help, live validation and build summary.*
 
-### Premium — calca un sitio real
+### Support — calca un sitio real
 
-![Premium](assets/images/premium-mapa-realista.png)
+![Support](assets/images/support-mapa-realista.png)
 
 *Mapa realista: arrastra, zoom con rueda, cuadrado naranja = tu mapa 2×2–16×16 km → “Crear la receta y previsualizar”. Buscador + Everon, Fort Bragg, Alcalá de Henares, Normandía, Kyiv.*
 *Realistic map: drag, wheel-zoom, orange square = your 2×2–16×16 km map → “Create recipe and preview”. Search + shortcuts.*
 
-Calca / Traces: Copernicus DEM + ESA WorldCover + OSM (carreteras, cauces, usos, **~10.000 casas en 8 km con planta y giro reales**). En Standard esta pantalla muestra cartel Premium y te manda a plantillas.
+Calca / Traces: Copernicus DEM + ESA WorldCover + OSM (carreteras, cauces, usos, **~10.000 casas en 8 km con planta y giro reales**). En Standard esta pantalla muestra cartel Support y te manda a plantillas.
 
 ---
 
@@ -138,7 +138,7 @@ Requisitos / Requirements: Windows 10/11 64-bit · Arma Reforger Tools + juego /
 ## ❓ FAQ
 
 **¿Standard es demo? / Is Standard a demo?**
-No. Mapas completos y jugables. Premium solo añade sitio real + `.wrp`. / No. Full playable maps. Premium only adds real-site + `.wrp`.
+No. Mapas completos y jugables. Support solo añade sitio real + `.wrp`. / No. Full playable maps. Support only adds real-site + `.wrp`.
 
 **¿Nieve? / Snow?**
 Reforger 1.8 no trae superficie de nieve. Alta montaña = roca. / No snow surface in 1.8. High mountain = rock.
@@ -149,10 +149,10 @@ No. El agua es infranqueable para el trazado (a propósito). / No. Water is untr
 **¿Idioma? / Language?**
 ES por defecto + EN. Auto desde Windows, en Ajustes (relanza). / ES default + EN. Auto from Windows, in Settings (restarts).
 
-## 💎 Premium
+## 💎 Support
 
-Standard + sitio real + `.wrp`. Pide `worldforge.lic` junto al `.exe`. ¿Lo quieres? Abre un Issue “Premium”.
-Standard + real-site + `.wrp`. Needs `worldforge.lic` next to `.exe`. Want it? Open a “Premium” Issue.
+Standard + sitio real + `.wrp`. Pide `worldforge.lic` junto al `.exe`. ¿Lo quieres? Abre un Issue “Support”.
+Standard + real-site + `.wrp`. Needs `worldforge.lic` next to `.exe`. Want it? Open a “Support” Issue.
 
 ## 📁 Repo
 
