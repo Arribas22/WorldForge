@@ -1,18 +1,19 @@
 ---
-name: Bug
-about: Algo falla generando un mapa
+name: Bug / Fallo
+about: Something breaks generating a map / Algo falla generando un mapa
 labels: bug
 ---
-<!-- Pega tu receta y tu log; sin eso no se puede reproducir -->
-**Receta:**
+<!-- Paste your recipe and log; without them it can't be reproduced / Pega tu receta y tu log; sin eso no se puede reproducir -->
+**Recipe / Receta:**
 ```json
 {}
 ```
-**Comando:**
+**Command / Comando:**
 ```
 WorldForge.exe --cli build ...
 ```
 **Log / Preflight:**
 ```
-pega aqui
+paste here / pega aqui
 ```
+**Expected / Esperado:**

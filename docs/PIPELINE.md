@@ -1,5 +1,7 @@
 # El pipeline, fase a fase
 
+> English version: [PIPELINE_EN.md](PIPELINE_EN.md).
+
 Una receta entra por `worldforge/spec.py` y sale una carpeta que el Workbench
 abre. En medio hay nueve fases, y **el orden no es negociable**: cada una
 consume mascaras que produjo la anterior.

@@ -91,8 +91,8 @@ Minimal recipe:
 
 ## Docs
 
-- `docs/PLANTILLAS.md` — 13 templates + field table (Spanish, auto-translatable).
-- `docs/PIPELINE.md` — build/cook phases and why in that order.
+- `docs/TEMPLATES.md` — 13 templates + field table.
+- `docs/PIPELINE_EN.md` — build/cook phases and why in that order.
 - `recipes/` — copy/paste, change `name` + `seed`.
 
 ## Language

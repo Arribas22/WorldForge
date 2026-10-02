@@ -1,5 +1,7 @@
 # Plantillas de mapa
 
+> English version: [TEMPLATES.md](TEMPLATES.md).
+
 Copia el bloque que mas se parezca a lo que quieres, pegalo en
 `recipes/<nombre>.json`, cambia `name` y `seed`, y adelante:
 

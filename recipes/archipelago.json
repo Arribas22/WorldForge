@@ -1,5 +1,5 @@
 {
-  "_comment": "Archipielago: varias islas sin istmo. Cada masa de tierra tiene su propia red viaria; los nucleos aislados se quedan sin carretera a proposito, porque WorldForge no pone puentes.",
+  "_comment": "Archipielago: varias islas sin istmo. Cada masa de tierra tiene su propia red viaria; los nucleos aislados se quedan sin carretera a proposito, porque WorldForge no pone puentes. / EN: Archipelago: several islands with no isthmus. Each landmass gets its own road network; isolated settlements stay roadless on purpose, because WorldForge builds no bridges.",
   "name": "Islas",
   "title": "Islas",
   "seed": 7,

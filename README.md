@@ -110,7 +110,7 @@ Abrir en Workbench / Open in Workbench:
 | `bosque_cerrado` | Emboscadas / Ambush forest |
 | `peninsula`, `isla_grande` | Costa larga / Long coast |
 
-Detalle de campos: [docs/PLANTILLAS.md](docs/PLANTILLAS.md) · Pipeline: [docs/PIPELINE.md](docs/PIPELINE.md).
+Detalle de campos: [docs/PLANTILLAS.md](docs/PLANTILLAS.md) ([EN](docs/TEMPLATES.md)) · Pipeline: [docs/PIPELINE.md](docs/PIPELINE.md) ([EN](docs/PIPELINE_EN.md)).
 
 ## ⬇ Descarga / Download
 
