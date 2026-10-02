@@ -1,0 +1,18 @@
+---
+name: Bug
+about: Algo falla generando un mapa
+labels: bug
+---
+<!-- Pega tu receta y tu log; sin eso no se puede reproducir -->
+**Receta:**
+```json
+{}
+```
+**Comando:**
+```
+WorldForge.exe --cli build ...
+```
+**Log / Preflight:**
+```
+pega aqui
+```

@@ -1,163 +1,155 @@
-# WorldForge Standard — Generador de mapas para Arma Reforger / Map generator for Arma Reforger
+![WorldForge Standard](assets/images/hero-banner.png)
 
-> 🇪🇸 Español abajo · 🇺🇸 English below · Documentación completa: [🇪🇸 README.es.md](README.es.md) · [🇺🇸 README.en.md](README.en.md)
+[![Windows](https://img.shields.io/badge/Windows-10%2F11-blue)](https://github.com/) [![Arma Reforger](https://img.shields.io/badge/Arma-Reforger-orange)](https://reforger.armaplatform.com/) [![ES](https://img.shields.io/badge/lang-ES-green)](README.es.md) [![EN](https://img.shields.io/badge/lang-EN-green)](README.en.md) [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
-**WorldForge Standard** genera mundos completos y jugables para Arma Reforger: terreno, carreteras, bosques, pueblos con calles, misiones y `.gproj` listo para abrir en Workbench. **Procedural ilimitado, gratis.**
+# WorldForge Standard
 
-**WorldForge Standard** generates complete, playable worlds for Arma Reforger: terrain, roads, forests, towns with streets, missions and a `.gproj` ready to open in Workbench. **Unlimited procedural, free.**
+> **Genera mundos completos y jugables para Arma Reforger. Procedural ilimitado, gratis.**
+> **Generate complete, playable Arma Reforger worlds. Unlimited procedural, free.**
 
-| | Standard | Premium |
-|---|---|---|
-| Procedural ilimitado (13 plantillas, biomas, relieve, pueblos) / Unlimited procedural (13 templates, biomes, relief, towns) | ✅ | ✅ |
-| Modo imagen (tu satelital → costa y arbolado) / Image mode (your satellite → coast & forest) | ✅ | ✅ |
-| Preview, build, cocinado/cook, preflight, catálogo/catalog | ✅ | ✅ |
-| **Mapa realista: eliges la zona en el mapa y se calca** / **Real-site mode: pick an area on the map and it gets traced** | ❌ | ✅ |
-| Relieve real Copernicus DEM / Real elevation (Copernicus DEM) | ❌ | ✅ |
-| Suelo ESA WorldCover / Ground cover (ESA WorldCover) | ❌ | ✅ |
-| Carreteras, cauces y casas de OpenStreetMap / Roads, rivers & houses from OpenStreetMap | ❌ | ✅ |
-| Import de mundos Arma 3 (`.wrp`) / Arma 3 world import (`.wrp`) | ❌ | ✅ |
+Docs completas: **[Español](README.es.md)** · **[English](README.en.md)**
 
-👉 Detalle con capturas / Details with screenshots: [🇪🇸 Español](#-standard-vs-premium-es) · [🇺🇸 English](#-standard-vs-premium-en)
+De una receta JSON a un addon que abre Workbench: terreno cocido, carreteras con perfil real, bosques, pueblos con calles, misiones y `.gproj`. Sin copiar `.terr` de nadie: lo escribe entero con GUIDs propios.
+
+From a JSON recipe to a Workbench-ready addon: baked terrain, properly-profiled roads, forests, towns with streets, missions and `.gproj`. No copied `.terr`: fully written with its own GUIDs.
+
+**[⬇ Descargar en Releases](../../releases)** · **[🚀 Quickstart](#-3-pasos--3-steps)** · **[Standard vs Premium](#-standard-vs-premium)** · **[Recetas](#-recetas--templates)**
 
 ---
 
-## 📸 Standard vs Premium (ES)
+## Por qué probarlo / Why try it
 
-### Standard — Procedural sin límites
+- **Mapa jugable en minutos:** aleatorio o plantilla → preview en 30-60 s → build → cook → jugar.
+- **Playable map in minutes:** random or template → 30-60 s preview → build → cook → play.
+- **No parece ruido:** erosión hidráulica, carreteras A\* con Chaikin, pueblos desde las calles, drenaje difuminado.
+- **Doesn't look like noise:** hydraulic erosion, A\* roads with Chaikin, street-first towns, blurred drainage.
+- **Repetible:** `seed` fija todo. Mismo JSON = mismo mapa byte a byte.
+- **Reproducible:** `seed` fixes everything. Same JSON = same map byte-for-byte.
 
-![Standard procedural](assets/images/preview-procedural.png)
+![Procedural](assets/images/preview-procedural.png)
+*Isla templada 8 km desde `recipes/everon_like.json` / 8 km temperate island from `recipes/everon_like.json`.*
 
-*Ejemplo procedural: isla templada 8 km generada desde `recipes/everon_like.json`.*
+---
 
-- **Empezar → Mapa aleatorio / Desde una plantilla / Procedural a medida / Desde una imagen tuya.** Nada que descargar, semilla = mismo mapa siempre.
-- **13 plantillas listas:** `everon_like`, `arland_like`, `archipelago`, `valle_montana`, `alta_montana`, `arid_plateau`, `costa_urbana`, `interior_agricola`, `bosque_cerrado`, `peninsula`, `isla_grande`, `montane_valley`, `texas_like`.
-- **Modo imagen (Standard sí):** le das tu PNG/JPG y la costa + arbolado salen de la foto. Si añades relieve en grises, también la cota.
-- **Flujo:** `Preview` (mira antes) → `Construir` (escribe el addon + terreno cocido `.ttile`) → `Cocinar` (Workbench: shore map, ríos, generadores, `.topo`, navmesh) → `Preflight` (revisa GUIDs, capas, carreteras).
-- **Lo que sale:** mundo + misiones GM/Conflict/Plain, satelital del jugador, minimapa.
+## 🔃 Standard vs Premium
 
-> 📷 **Añade tus capturas Standard aquí:**
-> - `assets/images/standard-empezar.png` — pantalla *Empezar* (5 caminos)
-> - `assets/images/standard-editor.png` — *Editor de receta* procedural
-> - `assets/images/standard-preview.png` — *Vista previa* de un mapa procedural
-
-### Premium — Calca un sitio real
-
-![Premium mapa realista](assets/images/premium-mapa-realista.png)
-
-*Premium / Mapa realista: mueves el mapa, colocas el cuadrado naranja (tu mapa 2×2 a 16×16 km) y pulsas “Crear la receta y previsualizar”. Buscador + atajos: Everon, Fort Bragg, Alcalá de Henares, Normandía, Kyiv.*
-
-*(Si ves este texto sin imagen, guarda tu captura como `assets/images/premium-mapa-realista.png` — es la imagen que adjuntaste en el chat).*
-
-- **Dónde:** pantalla *Mapa realista*. Arrastrar = mover, rueda = zoom. El cuadrado naranja es tu mapa a escala real.
-- **Qué calca:** relieve Copernicus DEM + cobertura ESA WorldCover + de OpenStreetMap: carreteras, cauces, usos del suelo y **huellas de edificios (~10.000 casas en 8 km de ciudad, con planta y giro reales).**
-- **Tamaño:** 2×2, 4×4, 8×8 (recomendado: cabe ciudad + comarca), 12×12, 16×16 km.
-- **Límite del mapa:** Automático (según sitio) / Rodear de agua siempre / Tierra hasta el borde.
-- Fondo = teselas OSM (lo que ves es lo que se calca). Primera descarga tarda un par de minutos, luego queda en caché.
-
-| Función / pantalla | Standard | Premium (esta captura) |
+| | Standard (este repo / this repo) | Premium |
 |---|---|---|
-| Empezar, Recetas, Editor, Vista previa, Construir, Cocinar, Preflight, Catálogo | ✅ | ✅ |
-| Mapa realista (buscador, atajos, recuadro, tamaño, límite) | 🔒 muestra cartel “Premium” + te manda a plantillas | ✅ |
-| Desde coordenadas reales (Copernicus + OSM) | 🔒 | ✅ |
+| Procedural ilimitado + 13 plantillas / Unlimited procedural + 13 templates | ✅ | ✅ |
+| Modo imagen (tu satelital → costa y arbolado) / Image mode | ✅ | ✅ |
+| Preview, Build, Cook, Preflight, Catálogo / Catalog | ✅ | ✅ |
+| **Mapa realista: eliges la zona y se calca / Real-site: pick area, it gets traced** | ❌ | ✅ |
+| Relieve Copernicus DEM / Elevation | — | ✅ |
+| Suelo ESA WorldCover / Ground cover | — | ✅ |
+| Carreteras, cauces y casas OSM / OSM roads, rivers, houses | — | ✅ |
 | Import Arma 3 `.wrp` | — | ✅ |
 
----
+### Standard — lo que haces aquí
 
-## 📸 Standard vs Premium (EN)
+![Standard](assets/images/standard-empezar.png)
 
-### Standard — Unlimited procedural
+- Empezar: aleatorio, plantilla, procedural a medida, desde tu imagen.
+- Start: random, template, custom procedural, from your image.
+- Flujo / Flow: Preview → Construir/Build → Cocinar/Cook → Preflight.
+- Biomas / Biomes: `everon`, `arland`, `montane`, `arid`, `texas`.
 
-![Standard procedural](assets/images/preview-procedural.png)
+![Editor](assets/images/standard-editor.png)
+*Sustituye por tu captura del Editor + Preview / Replace with your Editor + Preview shot.*
 
-*Procedural example: 8 km temperate island built from `recipes/everon_like.json`.*
+### Premium — calca un sitio real
 
-- **Start → Random map / From a template / Custom procedural / From your image.** Nothing to download, seed = same map every time.
-- **13 ready templates:** `everon_like`, `arland_like`, `archipelago`, `valle_montana`, `alta_montana`, `arid_plateau`, `costa_urbana`, `interior_agricola`, `bosque_cerrado`, `peninsula`, `isla_grande`, `montane_valley`, `texas_like`.
-- **Image mode (Standard included):** give it your PNG/JPG and coast + forest come from the photo. Add a grayscale heightmap and elevation comes too.
-- **Flow:** `Preview` (look first) → `Build` (writes addon + baked `.ttile` terrain) → `Cook` (Workbench: shore map, rivers, generators, `.topo`, navmesh) → `Preflight` (checks GUIDs, layers, roads).
-- **Output:** world + GM/Conflict/Plain missions, player-map satellite, minimap.
+![Premium](assets/images/premium-mapa-realista.png)
 
-> 📷 **Drop your Standard screenshots here:**
-> - `assets/images/standard-empezar.png` — *Start* screen (5 ways)
-> - `assets/images/standard-editor.png` — procedural *Recipe editor*
-> - `assets/images/standard-preview.png` — procedural *Preview*
+*Mapa realista: arrastra, zoom con rueda, cuadrado naranja = tu mapa 2×2–16×16 km → “Crear la receta y previsualizar”. Buscador + Everon, Fort Bragg, Alcalá de Henares, Normandía, Kyiv.*
+*Realistic map: drag, wheel-zoom, orange square = your 2×2–16×16 km map → “Create recipe and preview”. Search + shortcuts.*
 
-### Premium — Trace a real place
+Calca / Traces: Copernicus DEM + ESA WorldCover + OSM (carreteras, cauces, usos, **~10.000 casas en 8 km con planta y giro reales**). En Standard esta pantalla muestra cartel Premium y te manda a plantillas.
 
-![Premium real-site map](assets/images/premium-mapa-realista.png)
-
-*Premium / Realistic map: drag the map, place the orange square (your 2×2 to 16×16 km map) and hit “Create recipe and preview”. Search + shortcuts: Everon, Fort Bragg, Alcalá de Henares, Normandy, Kyiv.*
-
-*(If you see broken-image text, save your screenshot as `assets/images/premium-mapa-realista.png` — it's the image you posted in chat).*
-
-- **Where:** *Realistic map* screen. Drag = pan, wheel = zoom. The orange square is your map at true scale.
-- **What it traces:** Copernicus DEM elevation + ESA WorldCover + from OpenStreetMap: roads, waterways, landuse and **building footprints (~10,000 houses over a city at 8 km, real footprint + rotation).**
-- **Size:** 2×2, 4×4, 8×8 (recommended: city + region fits), 12×12, 16×16 km.
-- **Map edge:** Automatic (per site) / Always water ring / Land to the edge.
-- Background = OSM tiles (what you see is what gets traced). First download takes a couple minutes, then cached.
-
-| Feature / screen | Standard | Premium (this shot) |
-|---|---|---|
-| Start, Recipes, Editor, Preview, Build, Cook, Preflight, Catalog | ✅ | ✅ |
-| Realistic map (search, shortcuts, box, size, edge) | 🔒 shows “Premium” card → points to templates | ✅ |
-| From real coordinates (Copernicus + OSM) | 🔒 | ✅ |
-| Arma 3 `.wrp` import | — | ✅ |
+> Para poner tu captura real, sobrescribe `assets/images/premium-mapa-realista.png` con la imagen del chat.
+> To use your real shot, overwrite `assets/images/premium-mapa-realista.png` with the chat image.
 
 ---
 
-## ⬇️ Descarga / Download
-
-- **Releases de GitHub (recomendado):** descarga la carpeta `WorldForge-Standard` completa (`WorldForge.exe` + `WorldForgeTools/` + `recipes/` + `locales/`). No basta el `.exe` suelto: sin el addon no cocina y sin recetas no hay plantillas.
-- **GitHub Releases (recommended):** download the full `WorldForge-Standard` folder (`WorldForge.exe` + `WorldForgeTools/` + `recipes/` + `locales/`). The lone `.exe` is not enough: no cooking without the addon, no templates without recipes.
-
-Requisitos / Requirements: Windows 10/11 64-bit · Arma Reforger Tools (Workbench) + juego/base game para cocinar y probar / to cook & test.
+## 🚀 3 pasos / 3 steps
 
 ```powershell
-WorldForge.exe                         # abre la interfaz / opens the UI
-WorldForge.exe --cli build receta.json --out C:/Desarrollo/MiMapa
+WorldForge.exe   # interfaz / UI
 ```
 
-## 🚀 Uso en 3 pasos / 3-step quickstart
-
-🇪🇸 1. Empezar → *Mapa aleatorio* o *Desde una plantilla* · 2. Vista previa → ajusta `seed` hasta que la costa convenza · 3. Construir → Cocinar → Preflight → abrir en Workbench.
-🇺🇸 1. Start → *Random map* or *From a template* · 2. Preview → tweak `seed` until the coast looks right · 3. Build → Cook → Preflight → open in Workbench.
-
 ```powershell
-# 1. mirar antes (30-60 s, no escribe nada) / look first
+# 1. Mira antes (no escribe nada) / Look first
 WorldForge.exe --cli preview recipes/everon_like.json --out preview.png
-# 2. generar / build
+# 2. Genera / Build
 WorldForge.exe --cli build recipes/everon_like.json --out C:/Desarrollo/MiMapa
-# 3. revisar / check + cocinar / cook
+# 3. Revisa + cocina / Check + cook
 WorldForge.exe --cli check C:/Desarrollo/MiMapa
 WorldForge.exe --cli cook C:/Desarrollo/MiMapa
 ```
 
-Recetas incluidas en `recipes/` (13). Docs: [PLANTILLAS](docs/PLANTILLAS.md) · [PIPELINE](docs/PIPELINE.md).
+Abrir en Workbench / Open in Workbench:
 
-## 🌍 Idiomas / Languages
+```powershell
+& "C:/Program Files (x86)/Steam/steamapps/common/Arma Reforger Tools/Workbench/ArmaReforgerWorkbenchSteamDiag.exe" `
+  -gproj "C:/Desarrollo/MiMapa/addon.gproj" `
+  -addonsDir "C:/Program Files (x86)/Steam/steamapps/common/Arma Reforger/addons,C:/Desarrollo" `
+  -wbmodule=WorldEditor -run -load "worlds/MiMundo/MiMundo.ent"
+```
 
-🇪🇸 Castellano por defecto, inglés incluido. Se detecta desde Windows, cambiable en Ajustes (relanza el programa).
-🇺🇸 Spanish by default, English included. Auto-detected from Windows, switchable in Settings (restarts the app).
+## 🗺 Recetas / Templates
+
+`recipes/` — copia, cambia `name` + `seed`, genera. / copy, change `name` + `seed`, build.
+
+| Receta | Ideal para / Best for |
+|---|---|
+| `everon_like` | Isla templada default / Default temperate island |
+| `arland_like` | Isla atlántica pequeña / Small atlantic island |
+| `archipelago` | Islas (sin puentes) / Islands (no bridges) |
+| `valle_montana`, `montane_valley` | Valle encajado / Carved valley |
+| `alta_montana` | Alta montaña (roca, no nieve) / High mountain |
+| `arid_plateau`, `texas_like` | Desierto / meseta / Arid / plateau |
+| `costa_urbana` | Ciudad + comarca / City + region |
+| `interior_agricola` | Campos y caseríos / Fields and hamlets |
+| `bosque_cerrado` | Emboscadas / Ambush forest |
+| `peninsula`, `isla_grande` | Costa larga / Long coast |
+
+Detalle de campos: [docs/PLANTILLAS.md](docs/PLANTILLAS.md) · Pipeline: [docs/PIPELINE.md](docs/PIPELINE.md).
+
+## ⬇ Descarga / Download
+
+En **[Releases](../../releases)**: carpeta completa `WorldForge-Standard` (`WorldForge.exe` + `WorldForgeTools/` + `recipes/` + `locales/` + `docs/`). El `.exe` suelto no basta.
+
+From **[Releases](../../releases)**: full folder. Lone `.exe` is not enough.
+
+Requisitos / Requirements: Windows 10/11 64-bit · Arma Reforger Tools + juego / game.
+
+## ❓ FAQ
+
+**¿Standard es demo? / Is Standard a demo?**
+No. Mapas completos y jugables. Premium solo añade sitio real + `.wrp`. / No. Full playable maps. Premium only adds real-site + `.wrp`.
+
+**¿Nieve? / Snow?**
+Reforger 1.8 no trae superficie de nieve. Alta montaña = roca. / No snow surface in 1.8. High mountain = rock.
+
+**¿Puentes? / Bridges?**
+No. El agua es infranqueable para el trazado (a propósito). / No. Water is untraversable by design.
+
+**¿Idioma? / Language?**
+ES por defecto + EN. Auto desde Windows, en Ajustes (relanza). / ES default + EN. Auto from Windows, in Settings (restarts).
 
 ## 💎 Premium
 
-🇪🇸 Premium = Standard + calcar sitios reales + `.wrp`. Requiere `worldforge.lic` junto al `.exe`. ¿Tienes Standard y quieres Premium? Abre un *Issue* con el asunto “Premium”.
-🇺🇸 Premium = Standard + real-site tracing + `.wrp`. Requires `worldforge.lic` next to the `.exe`. Got Standard and want Premium? Open an *Issue* titled “Premium”.
+Standard + sitio real + `.wrp`. Pide `worldforge.lic` junto al `.exe`. ¿Lo quieres? Abre un Issue “Premium”.
+Standard + real-site + `.wrp`. Needs `worldforge.lic` next to `.exe`. Want it? Open a “Premium” Issue.
 
-## 📁 Este repo / This repo
+## 📁 Repo
 
 ```
-WorldForge-Standard/
-  README.md / README.es.md / README.en.md
-  recipes/            # 13 recetas Standard / Standard recipes
-  docs/               # PLANTILLAS, PIPELINE
-  assets/images/      # capturas Standard + Premium / screenshots
-  WorldForgeTools/    # (en la Release, no aquí) / (in the Release, not here)
+recipes/  docs/  assets/images/
 ```
 
-Binarios por Release, no por commit. `build/` de Nuitka (1,4 GB) nunca se publica.
-Binaries via Releases, never committed. Nuitka `build/` (1.4 GB) is never published.
+Binarios por Release, nunca por commit. / Binaries via Releases, never committed.
 
 ## 📄 Licencia / License
 
-Ver / See [LICENSE](LICENSE). Standard: uso gratuito para generar mapas / free to use to generate maps. El código del generador no se redistribuye aquí / generator source is not redistributed here.
+[MIT](LICENSE) — docs, recetas y capturas libres para generar mapas (incluso comerciales). Mapas generados = tuyos (aplica EULA de Reforger).
+Docs, recipes and shots free to generate maps (even commercial). Generated maps = yours (Reforger EULA applies).
