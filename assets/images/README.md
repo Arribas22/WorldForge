@@ -1,15 +1,18 @@
 # Imágenes / Images
 
-Carpeta de capturas del README. / README screenshots folder.
+Capturas reales del programa (tema oscuro, ES). / Real program shots (dark theme, ES).
 
 | Fichero / File | Qué es / What | Estado / Status |
 |---|---|---|
-| `preview-procedural.png` | Ejemplo procedural 8 km / 8 km procedural example | ✅ incluido / included |
-| `premium-mapa-realista.png` | **Premium Mapa realista** (tu captura del chat: Alcalá de Henares, cuadrado naranja, panel Ir a/Tamaño/Límite) / **Premium Realistic map** (your chat screenshot) | ⚠️ **PENDIENTE: guarda tu imagen aquí con este nombre** / save your image here with this name |
-| `standard-empezar.png` | Standard Empezar (5 caminos) / Standard Start | ⚠️ pendiente / missing — haz captura de `WorldForge.exe` Standard / screenshot Standard `WorldForge.exe` |
-| `standard-editor.png` | Editor de receta procedural / Procedural recipe editor | ⚠️ pendiente / missing |
-| `standard-preview.png` | Vista previa procedural / Procedural preview | ⚠️ pendiente / missing |
-| `standard-build.png` | Construir + Preflight OK / Build + Preflight OK | ⚠️ opcional / optional |
+| `hero-banner.png` | Cabecera del README / README header | ✅ marca / branded |
+| `preview-procedural.png` | Mapa procedural 8 km / 8 km procedural map | ✅ render real / real render |
+| `premium-mapa-realista.png` | Premium Mapa realista (Alcalá, recuadro naranja, Ir a/Tamaño/Límite) | ✅ captura real / real shot |
+| `standard-empezar.png` | Empezar, 5 caminos + etiquetas Premium | ✅ captura real / real shot |
+| `standard-recetas.png` | Recetas + detalle JSON | ✅ captura real / real shot |
+| `standard-editor.png` | Editor (Verdania cargada) | ✅ captura real / real shot |
+| `standard-preview.png` | Vista previa | ✅ captura real / real shot |
+| `standard-build.png` | Construir | ✅ captura real / real shot |
+| `standard-realista-bloqueado.png` | Lo que ve Standard en Mapa realista (cartel Premium) | ✅ captura real / real shot |
 
-Sugerencia: 1600×900 PNG, interfaz en ES para `*-es` y EN para mostrar idioma. No subas `.exe` ni `worldforge.lic`.
-Tip: 1600×900 PNG. Don't upload `.exe` or `worldforge.lic`.
+Regenerar: `py -3 tools/capturas_repo.py [standard|premium|todo]` desde `C:\Desarrollo\ReforgerWorldForge`.
+No subir `.exe` ni `worldforge.lic`.

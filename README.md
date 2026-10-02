@@ -54,7 +54,8 @@ From a JSON recipe to a Workbench-ready addon: baked terrain, properly-profiled 
 - Biomas / Biomes: `everon`, `arland`, `montane`, `arid`, `texas`.
 
 ![Editor](assets/images/standard-editor.png)
-*Sustituye por tu captura del Editor + Preview / Replace with your Editor + Preview shot.*
+*Editor de receta con Verdania cargada: cada campo con ayuda, comprobación en vivo y resumen de lo que va a salir.*
+*Recipe editor with Verdania loaded: every field with help, live validation and build summary.*
 
 ### Premium — calca un sitio real
 
@@ -64,9 +65,6 @@ From a JSON recipe to a Workbench-ready addon: baked terrain, properly-profiled 
 *Realistic map: drag, wheel-zoom, orange square = your 2×2–16×16 km map → “Create recipe and preview”. Search + shortcuts.*
 
 Calca / Traces: Copernicus DEM + ESA WorldCover + OSM (carreteras, cauces, usos, **~10.000 casas en 8 km con planta y giro reales**). En Standard esta pantalla muestra cartel Premium y te manda a plantillas.
-
-> Para poner tu captura real, sobrescribe `assets/images/premium-mapa-realista.png` con la imagen del chat.
-> To use your real shot, overwrite `assets/images/premium-mapa-realista.png` with the chat image.
 
 ---
 

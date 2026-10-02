@@ -21,18 +21,19 @@ It doesn't copy anyone's `.terr`: it writes the whole thing from scratch with it
 - **Full pipeline:** Preview, Build, Cook (Workbench via CLI: shore map, rivers, generators, `.topo`, triple navmesh, BSP), Preflight, Catalog, Tools, Docs.
 - **Biomes:** `everon`, `arland`, `montane`, `arid`, `texas`. Seed fixes everything (same JSON = same map byte-for-byte).
 
-📷 Drop your Standard screenshots here:
-- `assets/images/standard-empezar.png` — Start
-- `assets/images/standard-editor.png` — Recipe editor
+Real program shots (dark theme, Spanish UI):
+
+- `assets/images/standard-empezar.png` — Start (2 Premium paths badged)
+- `assets/images/standard-recetas.png` — Recipes (templates + JSON detail)
+- `assets/images/standard-editor.png` — Recipe editor (Verdania loaded)
 - `assets/images/standard-preview.png` — Preview
-- `assets/images/standard-build.png` — Build / Preflight OK
+- `assets/images/standard-build.png` — Build
+- `assets/images/standard-realista-bloqueado.png` — what Standard shows on Realistic map (Premium card)
 
 ### Premium: realistic map (pick the area on the map)
 
 ![Premium realistic map](assets/images/premium-mapa-realista.png)
-*Realistic-map screen: drag to pan, wheel to zoom, orange square is your map. Right: Go-to (search + Everon, Fort Bragg, Alcalá de Henares, Normandy, Kyiv), Size (2×2 to 16×16 km), Edge (Automatic / always water / land to edge), “Create recipe and preview” button.*
-
-*(If broken, save your screenshot as `assets/images/premium-mapa-realista.png`).*
+*Realistic-map screen captured from the app: drag, wheel-zoom, orange square = your 2×2–16×16 km map → “Create recipe and preview”. Search + shortcuts.*
 
 - **Real sources:** Copernicus DEM elevation, ESA WorldCover, OpenStreetMap roads + waterways + landuse + building footprints (~10,000 houses over a city at 8 km, real footprint + rotation). Sentinel-2 color.
 - **Sizes:** 2×2, 4×4, 8×8 (recommended), 12×12, 16×16 km. 8 km already fits city + region; cooking scales with side².

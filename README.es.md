@@ -21,18 +21,19 @@ No copia el `.terr` de nadie: lo escribe entero desde cero con GUIDs propios que
 - **Todo el pipeline:** Vista previa, Construir, Cocinar (Workbench por CLI: shore map, ríos, generadores, `.topo`, navmesh triple, BSP), Preflight, Catálogo, Herramientas, Documentación.
 - **Biomas:** `everon`, `arland`, `montane`, `arid`, `texas`. Semilla fija todo (mismo JSON = mismo mapa byte a byte).
 
-📷 Pon aquí tus capturas Standard:
-- `assets/images/standard-empezar.png` — Empezar
-- `assets/images/standard-editor.png` — Editor de receta
+Capturas reales del programa (tema oscuro, en castellano):
+
+- `assets/images/standard-empezar.png` — Empezar (los 2 caminos Premium con etiqueta)
+- `assets/images/standard-recetas.png` — Recetas (plantillas + detalle JSON)
+- `assets/images/standard-editor.png` — Editor de receta (Verdania cargada)
 - `assets/images/standard-preview.png` — Vista previa
-- `assets/images/standard-build.png` — Construir / Preflight OK
+- `assets/images/standard-build.png` — Construir
+- `assets/images/standard-realista-bloqueado.png` — lo que ve Standard en Mapa realista (cartel Premium)
 
 ### Premium: mapa realista (elige la zona en el mapa)
 
 ![Premium mapa realista](assets/images/premium-mapa-realista.png)
-*Pantalla Mapa realista: arrastra para mover, rueda para acercar, el cuadrado naranja es tu mapa. Derecha: Ir a (buscador + Everon, Fort Bragg, Alcalá de Henares, Normandía, Kyiv), Tamaño (2×2 a 16×16 km), Límite (Automático / agua siempre / tierra al borde), botón “Crear la receta y previsualizar”.*
-
-*(Si la imagen no se ve, guarda tu captura como `assets/images/premium-mapa-realista.png`).*
+*Pantalla Mapa realista capturada del programa: arrastra para mover, rueda para acercar, el cuadrado naranja es tu mapa. Derecha: Ir a, Tamaño, Límite y “Crear la receta y previsualizar”.*
 
 - **Fuentes reales:** relieve Copernicus DEM, cobertura ESA WorldCover, carreteras + cauces + usos + huellas de edificios de OpenStreetMap (~10.000 casas en 8 km de ciudad, planta y giro reales). Satelital Sentinel-2 para el color.
 - **Tamaños:** 2×2, 4×4, 8×8 (recomendado), 12×12, 16×16 km. A 8 km ya cabe ciudad + comarca; cocinar crece con el cuadrado del lado.
