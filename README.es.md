@@ -2,6 +2,14 @@
 
 > Versión Standard: mapas procedurales **sin límites**. La versión Premium añade calcar sitios reales desde un mapa (ver abajo).
 
+## ▶ Tu primer mapa en 3 minutos
+
+[![Video: crear el mapa test](assets/images/preview-procedural.png)](https://streamable.com/jfb5mr)
+
+### **[▶ Ver video: cómo crear el primer mapa test](https://streamable.com/jfb5mr)**
+
+De la receta al addon, paso a paso.
+
 ## Qué es
 
 Le das una receta JSON (o la haces clicando en la interfaz) y te escribe un addon que el Workbench abre: terreno cocido, hidrología, carreteras con perfil real, bosques, pueblos con calles, misiones y `.gproj`.
@@ -55,6 +63,12 @@ Capturas reales del programa (tema oscuro, en castellano):
 En **Releases**: carpeta `WorldForge-Standard` completa (`WorldForge.exe` 49 MB + `WorldForgeTools/` + `recipes/` + `locales/` + `docs/`). No descargues solo el `.exe`.
 
 Requisitos: Windows 10/11 64-bit, Arma Reforger Tools.
+
+## Video guía
+
+Generación completa del mapa `test` (Verdania, 8 km): de la receta al addon listo.
+
+[▶ Ver video: cómo crear el primer mapa test](https://streamable.com/jfb5mr)
 
 ## Uso
 

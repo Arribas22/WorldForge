@@ -2,6 +2,14 @@
 
 > Standard edition: unlimited **procedural** maps. Premium adds real-site tracing from a map (see below).
 
+## ▶ Your first map in 3 minutes
+
+[![Video: first test map](assets/images/preview-procedural.png)](https://streamable.com/jfb5mr)
+
+### **[▶ Watch: how to create the first test map](https://streamable.com/jfb5mr)**
+
+From recipe to addon, step by step.
+
 ## What it is
 
 Give it a JSON recipe (or click through the UI) and it writes an addon that Workbench opens: baked terrain, hydrology, properly-profiled roads, forests, towns with streets, missions and `.gproj`.
@@ -55,6 +63,12 @@ Real program shots (dark theme, Spanish UI):
 From **Releases**: full `WorldForge-Standard` folder (`WorldForge.exe` 49 MB + `WorldForgeTools/` + `recipes/` + `locales/` + `docs/`). Don't download the lone `.exe`.
 
 Requirements: Windows 10/11 64-bit, Arma Reforger Tools.
+
+## Video guide
+
+Full `test` map generation (Verdania, 8 km): from recipe to Workbench-ready addon.
+
+[▶ Watch: how to create the first test map](https://streamable.com/jfb5mr)
 
 ## Use
 

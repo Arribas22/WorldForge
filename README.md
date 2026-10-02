@@ -13,6 +13,14 @@ De una receta JSON a un addon que abre Workbench: terreno cocido, carreteras con
 
 From a JSON recipe to a Workbench-ready addon: baked terrain, properly-profiled roads, forests, towns with streets, missions and `.gproj`. No copied `.terr`: fully written with its own GUIDs.
 
+## ▶ Tu primer mapa en 3 minutos / Your first map in 3 minutes
+
+[![Video: crear el mapa test / first test map](assets/images/preview-procedural.png)](https://streamable.com/jfb5mr)
+
+### **[▶ Ver video: cómo crear el primer mapa test](https://streamable.com/jfb5mr)**
+
+De la receta al addon, paso a paso. / From recipe to addon, step by step.
+
 **[⬇ Descargar en Releases](../../releases)** · **[🚀 Quickstart](#-3-pasos--3-steps)** · **[Standard vs Premium](#-standard-vs-premium)** · **[Recetas](#-recetas--templates)**
 
 ---
@@ -67,6 +75,13 @@ From a JSON recipe to a Workbench-ready addon: baked terrain, properly-profiled 
 Calca / Traces: Copernicus DEM + ESA WorldCover + OSM (carreteras, cauces, usos, **~10.000 casas en 8 km con planta y giro reales**). En Standard esta pantalla muestra cartel Premium y te manda a plantillas.
 
 ---
+
+## ▶ Video guía / Video guide
+
+🇪🇸 Generación completa del mapa `test` (Verdania, 8 km): de la receta al addon listo para Workbench.
+🇺🇸 Full `test` map generation (Verdania, 8 km): from recipe to Workbench-ready addon.
+
+[▶ Ver video: cómo crear el primer mapa test](https://streamable.com/jfb5mr)
 
 ## 🚀 3 pasos / 3 steps
 
