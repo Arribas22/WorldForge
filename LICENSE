@@ -1,0 +1,23 @@
+MIT License
+
+Copyright (c) 2026 WorldForge
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the documentation, recipes, and screenshots in this repository (the
+"Standard Showcase"), to use them to generate maps with WorldForge Standard,
+including commercial use of the generated maps, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the showcase.
+
+THE SHOWCASE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. The WorldForge
+binaries (WorldForge.exe / WorldForgeTools) distributed via Releases are free
+to use to generate maps, but their reverse-engineering, redistribution as
+standalone binaries outside official Releases, and removal of the Premium
+license check are prohibited. Generated maps belong to their creators;
+Bohemia Interactive / Arma Reforger EULA applies in game.
+
+ES: Este repo (docs, recetas, capturas) es libre para generar mapas, incluidos
+mapas comerciales. Los binarios de Releases son gratuitos para generar mapas;
+no se permite su reempaquetado fuera de Releases oficiales ni saltarse la
+licencia Premium. Los mapas generados son de sus creadores.

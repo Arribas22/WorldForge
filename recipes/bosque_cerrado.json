@@ -1,0 +1,19 @@
+{
+  "_comment": "Bosque cerrado. Ver docs/PLANTILLAS.md.",
+  "name": "SelvaNegra",
+  "seed": 9001,
+  "size_m": 8192,
+  "cell_size": 2.0,
+  "landform": "inland",
+  "relief": "rolling",
+  "land_fraction": 1.0,
+  "erosion": 0.9,
+  "biome": "montane",
+  "forest_cover": 0.58,
+  "tree_spacing": 7.0,
+  "max_trees": 140000,
+  "settlement_density": 0.5,
+  "game_modes": [
+    "GM"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_comment": "Valle de montana. Ver docs/PLANTILLAS.md.",
+  "name": "ValleAlto",
+  "seed": 3312,
+  "size_m": 8192,
+  "cell_size": 2.0,
+  "landform": "valley",
+  "relief": "mountainous",
+  "ridged": true,
+  "land_fraction": 0.97,
+  "erosion": 1.0,
+  "river_carve": 6.0,
+  "biome": "montane",
+  "forest_cover": 0.45,
+  "settlement_density": 0.7,
+  "game_modes": [
+    "GM"
+  ]
+}

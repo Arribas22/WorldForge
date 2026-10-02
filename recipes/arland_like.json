@@ -1,0 +1,17 @@
+{
+  "_comment": "Isla atlantica pequena de brezo y pino, al estilo Arland: 4 km, poco bosque, mucha roca, un pueblo grande y caserios.",
+  "name": "Brannoc",
+  "title": "Brannoc",
+  "seed": 4041,
+  "size_m": 4096,
+  "cell_size": 2.0,
+  "landform": "island",
+  "relief": "hilly",
+  "land_fraction": 0.58,
+  "erosion": 1.0,
+  "biome": "arland",
+  "forest_cover": 0.18,
+  "rock_density": 1.6,
+  "settlement_density": 1.2,
+  "game_modes": ["GM"]
+}

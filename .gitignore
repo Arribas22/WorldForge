@@ -1,0 +1,14 @@
+# Binarios fuera, fuentes fuera
+*.exe
+*.pdb
+build/
+__pycache__/
+*.pyc
+.worldforge/
+tiles_cache/
+*.ttile
+*.nmn
+Thumbs.db
+Desktop.ini
+worldforge.lic
+*.licencia

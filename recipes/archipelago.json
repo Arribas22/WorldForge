@@ -1,0 +1,16 @@
+{
+  "_comment": "Archipielago: varias islas sin istmo. Cada masa de tierra tiene su propia red viaria; los nucleos aislados se quedan sin carretera a proposito, porque WorldForge no pone puentes.",
+  "name": "Islas",
+  "title": "Islas",
+  "seed": 7,
+  "size_m": 4096,
+  "cell_size": 2.0,
+  "landform": "archipelago",
+  "relief": "hilly",
+  "land_fraction": 0.38,
+  "erosion": 0.9,
+  "biome": "everon",
+  "forest_cover": 0.28,
+  "settlement_density": 1.4,
+  "game_modes": ["GM"]
+}

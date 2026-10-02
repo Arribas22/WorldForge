@@ -1,0 +1,17 @@
+{
+  "_comment": "Meseta arida continental: matorral, pinar disperso, pistas de tierra y nucleos separados.",
+  "name": "Sierra_Seca",
+  "title": "Sierra Seca",
+  "seed": 3312,
+  "size_m": 8192,
+  "cell_size": 2.0,
+  "landform": "plateau",
+  "relief": "hilly",
+  "land_fraction": 1.0,
+  "erosion": 0.7,
+  "biome": "arid",
+  "forest_cover": 0.08,
+  "field_cover": 0.16,
+  "settlement_density": 0.9,
+  "game_modes": ["GM"]
+}

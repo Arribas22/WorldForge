@@ -1,0 +1,19 @@
+{
+  "_comment": "Interior agricola: muchos pueblos y campos. Ver docs/PLANTILLAS.md.",
+  "name": "LlanoDelSur",
+  "seed": 6120,
+  "size_m": 8192,
+  "cell_size": 2.0,
+  "landform": "inland",
+  "relief": "mild",
+  "land_fraction": 1.0,
+  "erosion": 0.75,
+  "river_carve": 5.0,
+  "biome": "everon",
+  "forest_cover": 0.14,
+  "field_cover": 0.3,
+  "settlement_density": 1.6,
+  "game_modes": [
+    "GM"
+  ]
+}

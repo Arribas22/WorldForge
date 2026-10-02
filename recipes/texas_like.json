@@ -1,0 +1,28 @@
+{
+  "_comment": "Texas Hill Country: meseta continental disecada, sin mar. Mesetas con escarpe, canadas de rio encajadas, encinar disperso en manchas, rancho y cultivo extenso, y nucleos separados unidos por carretera larga.",
+  "name": "LoneStar",
+  "title": "Lone Star",
+  "seed": 2024,
+  "size_m": 10240,
+  "cell_size": 2.0,
+  "landform": "plateau",
+  "relief": "rolling",
+  "max_height": 240.0,
+  "land_fraction": 1.0,
+  "sea_depth": 20.0,
+  "erosion": 0.95,
+  "ridged": false,
+  "river_carve": 6.0,
+  "biome": "texas",
+  "forest_cover": 0.16,
+  "tree_spacing": 11.0,
+  "rock_density": 1.3,
+  "field_cover": 0.24,
+  "settlement_density": 0.85,
+  "max_trees": 90000,
+  "max_rocks": 6000,
+  "day_time": 10.0,
+  "game_modes": [
+    "GM"
+  ]
+}

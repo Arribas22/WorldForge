@@ -1,0 +1,19 @@
+{
+  "_comment": "Grande, tamano Everon. Ver docs/PLANTILLAS.md.",
+  "name": "GranIsla",
+  "seed": 1122,
+  "size_m": 12800,
+  "cell_size": 2.0,
+  "landform": "island",
+  "relief": "rolling",
+  "land_fraction": 0.64,
+  "erosion": 0.95,
+  "biome": "everon",
+  "forest_cover": 0.32,
+  "settlement_density": 1.1,
+  "max_trees": 200000,
+  "max_rocks": 12000,
+  "game_modes": [
+    "GM"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "_comment": "Valle de montana continental: sin mar, pinar denso, carreteras que rodean las laderas y pueblos en el fondo del valle.",
+  "name": "Kaltental",
+  "title": "Kaltental",
+  "seed": 8801,
+  "size_m": 10240,
+  "cell_size": 2.5,
+  "landform": "valley",
+  "relief": "mountainous",
+  "land_fraction": 0.97,
+  "erosion": 1.0,
+  "ridged": true,
+  "biome": "montane",
+  "forest_cover": 0.45,
+  "settlement_density": 0.8,
+  "game_modes": ["GM"]
+}

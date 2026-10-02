@@ -1,0 +1,18 @@
+{
+  "_comment": "Costa urbana: una ciudad grande y su comarca. Ver docs/PLANTILLAS.md.",
+  "name": "PuertoReal",
+  "seed": 5150,
+  "size_m": 8192,
+  "cell_size": 2.0,
+  "landform": "coastal",
+  "relief": "mild",
+  "land_fraction": 0.72,
+  "erosion": 0.7,
+  "biome": "everon",
+  "forest_cover": 0.16,
+  "field_cover": 0.18,
+  "settlement_density": 1.8,
+  "game_modes": [
+    "GM"
+  ]
+}

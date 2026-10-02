@@ -1,0 +1,20 @@
+{
+  "_comment": "Alta montana. Ver docs/PLANTILLAS.md.",
+  "name": "PicoNegro",
+  "seed": 8080,
+  "size_m": 8192,
+  "cell_size": 2.0,
+  "landform": "inland",
+  "relief": "alpine",
+  "ridged": true,
+  "land_fraction": 1.0,
+  "erosion": 1.0,
+  "biome": "montane",
+  "forest_cover": 0.3,
+  "rock_density": 2.0,
+  "settlement_density": 0.4,
+  "day_time": 11.0,
+  "game_modes": [
+    "GM"
+  ]
+}
