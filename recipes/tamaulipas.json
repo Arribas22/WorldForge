@@ -1,0 +1,57 @@
+{
+  "_comment": "Tamaulipas, Mexico, con RELIEVE REAL del Copernicus DEM. El recuadro (25.20-27.66 N, 99.90-97.15 O) es cuadrado en kilometros y mete Nuevo Laredo, Guerrero, Reynosa, Matamoros y la costa del Golfo. 274 km reales metidos en 12,8: escala 1:21, o sea una maqueta -- la silueta y las posiciones son las de verdad, las distancias no. height_scale 0.30: a 0.20 el mapa se quedaba en 186 m y no habia montanas -- la region es llanura de verdad (solo el 1,2% del terreno real pasa de 500 m) y la Sierra Madre es una franja fina en el borde oeste. mountain_spread_m 170: desparrama la masa de la sierra para que ocupe el doble y de paso le quita las agujas -- sin el, la pendiente p95 en la sierra era de 79 grados (paredes verticales) porque al comprimir lo horizontal 21 veces y lo vertical solo 3 las laderas se multiplican por 7. mountain_detail 0.9: la media ancha da el TAMANO pero deja una duna pelada (pendiente p95 de 21 grados, y sin nada por encima de 33 el terreno se pinta de hierba); el relieve fino se le suma encima y devuelve el cresterio -- 74,5 grados, casi los 79 de la version que se veia bien, pero ocupando el doble.",
+  "name": "Tamaulipas",
+  "title": "Tamaulipas",
+  "author": "WorldForge",
+  "seed": 1824,
+  "size_m": 12800,
+  "cell_size": 2.0,
+  "landform": "coastal",
+  "coast_side": 3,
+  "relief": "rolling",
+  "max_height": 420.0,
+  "land_fraction": 0.78,
+  "sea_depth": 55.0,
+  "erosion": 0.9,
+  "ridged": false,
+  "river_carve": 7.0,
+  "coast_band": 0.04,
+  "biome": "texas",
+  "forest_cover": 0.34,
+  "tree_spacing": 8.5,
+  "rock_density": 0.8,
+  "field_cover": 0.2,
+  "settlement_density": 0.9,
+  "max_trees": 800000,
+  "max_rocks": 8000,
+  "day_time": 9.0,
+  "place_names": [
+    "Nuevo_Laredo",
+    "Reynosa",
+    "Matamoros",
+    "San_Fernando",
+    "Guerrero",
+    "Soto_la_Marina"
+  ],
+  "game_modes": [
+    "GM"
+  ],
+  "settlement_counts": {
+    "city": 3,
+    "town": 3,
+    "village": 8,
+    "hamlet": 14
+  },
+  "heightmap": {
+    "lat_min": 25.2,
+    "lat_max": 27.66,
+    "lon_min": -99.9,
+    "lon_max": -97.15,
+    "height_scale": 0.3,
+    "mountain_spread_m": 170,
+    "mountain_detail": 0.9
+  },
+  "scrub_cover": 0.55,
+  "scrub_spacing": 11.0,
+  "max_scrub": 450000
+}

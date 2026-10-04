@@ -19,50 +19,100 @@ It doesn't copy anyone's `.terr`: it writes the whole thing from scratch with it
 ![Procedural example](assets/images/preview-procedural.png)
 *8 km temperate island from `recipes/everon_like.json`.*
 
-## Standard vs Support — with screenshots
+## Everything included
 
-### Standard: procedural + your image (included here)
+**Free and complete.** There is no cut-down edition and nothing is locked:
+everything here works.
 
-- **5 ways in Start:** Random map · From template (13) · Custom procedural · From your image · (the 2 real-site ones are Support, shown with a badge).
-- **13 templates in `recipes/`:** `everon_like`, `arland_like`, `archipelago`, `valle_montana`, `alta_montana`, `arid_plateau`, `costa_urbana`, `interior_agricola`, `bosque_cerrado`, `peninsula`, `isla_grande`, `montane_valley`, `texas_like`.
-- **Image mode:** your PNG/JPG drives coast + forest; add a grayscale heightmap and it drives elevation too.
-- **Full pipeline:** Preview, Build, Cook (Workbench via CLI: shore map, rivers, generators, `.topo`, triple navmesh, BSP), Preflight, Catalog, Tools, Docs.
-- **Biomes:** `everon`, `arland`, `montane`, `arid`, `texas`. Seed fixes everything (same JSON = same map byte-for-byte).
+| | |
+|---|---|
+| Unlimited procedural + 13 templates | ✅ |
+| Image mode (your satellite photo → coastline and woodland) | ✅ |
+| Preview, Build, Cook, Preflight, Catalog | ✅ |
+| **Realistic map: pick the area and it gets traced** | ✅ |
+| Copernicus DEM elevation | ✅ |
+| ESA WorldCover ground cover | ✅ |
+| OSM roads, watercourses and houses | ✅ |
+| Import Arma 3 `.wrp` | ✅ |
 
-Real program shots (dark theme, Spanish UI):
+### Procedural
 
-- `assets/images/standard-empezar.png` — Start (2 Support paths badged)
-- `assets/images/standard-recetas.png` — Recipes (templates + JSON detail)
-- `assets/images/standard-editor.png` — Recipe editor (Verdania loaded)
-- `assets/images/standard-preview.png` — Preview
-- `assets/images/standard-build.png` — Build
-- `assets/images/standard-realista-bloqueado.png` — what Standard shows on Realistic map (Support card)
+![Procedural](assets/images/standard-empezar.png)
 
-### Support: realistic map (pick the area on the map)
+Start: random, template, custom procedural, from your own image. Biomes:
+`everon`, `arland`, `montane`, `arid`, `texas`.
 
-![Support realistic map](assets/images/support-mapa-realista.png)
-*Realistic-map screen captured from the app: drag, wheel-zoom, orange square = your 2×2–16×16 km map → “Create recipe and preview”. Search + shortcuts.*
+![Editor](assets/images/standard-editor.png)
+*Recipe editor: every field with its help text, live validation and a summary
+of what will come out.*
 
-- **Real sources:** Copernicus DEM elevation, ESA WorldCover, OpenStreetMap roads + waterways + landuse + building footprints (~10,000 houses over a city at 8 km, real footprint + rotation). Sentinel-2 color.
-- **Sizes:** 2×2, 4×4, 8×8 (recommended), 12×12, 16×16 km. 8 km already fits city + region; cooking scales with side².
-- **Edge:** Automatic (inland=land, coast=water), Water ring, Land to edge (cut visible — normal in Reforger).
-- **On Standard** this screen shows a “Real-site tracing is Support” card pointing to templates/procedural.
+### Realistic map
 
-| | Standard | Support |
-|---|---|---|
-| Procedural (13 templates, biomes, relief, towns) | ✅ | ✅ |
-| Image mode (your satellite → coast & forest) | ✅ | ✅ |
-| Preview, build, cook, preflight, catalog | ✅ | ✅ |
-| Copernicus DEM elevation | — | ✅ |
-| ESA WorldCover | — | ✅ |
-| OSM roads, rivers & houses | — | ✅ |
-| Arma 3 `.wrp` import | — | ✅ |
+![Realistic map](assets/images/support-mapa-realista.png)
+
+Drag, wheel-zoom, the orange square is your map (2×2 – 16×16 km) → *Create
+recipe and preview*. It traces the relief from the Copernicus DEM, the ground
+cover from ESA WorldCover and, from OpenStreetMap, the roads, the watercourses
+and the building footprints: **around 10,000 houses in 8 km over a city, with
+their real plan and rotation**.
 
 ## Download
 
-From **Releases**: full `WorldForge-Standard` folder (`WorldForge.exe` 49 MB + `WorldForgeTools/` + `recipes/` + `locales/` + `docs/`). Don't download the lone `.exe`.
+From **Releases**: full `WorldForge` folder (`WorldForge.exe` 82 MB + `WorldForgeTools/` + `recipes/` + `locales/` + `docs/`). Don't download the lone `.exe`.
 
 Requirements: Windows 10/11 64-bit, Arma Reforger Tools.
+
+## First run
+
+### You do not need Python
+
+The `.exe` carries its own Python, numpy, scipy and Tk inside. Unzip and
+double-click: there is nothing to install.
+
+What you **do** need:
+
+| | For what | Required? |
+|---|---|---|
+| **Arma Reforger** | Opening the map you made | Yes, to play it |
+| **Arma Reforger Tools** | Cooking (navmesh, player map, generators) | Yes, to finish a map |
+| Python | — | **No** |
+
+> **The Tools are a separate entry in Steam**, not part of the game. Search
+> for *Arma Reforger Tools*. Without them the whole addon and the terrain are
+> still generated, but you cannot cook, and a map that is not cooked opens
+> with no AI navigation and an empty player map.
+
+### Unzip the whole folder
+
+The `.exe` on its own does not work: it needs `WorldForgeTools/` (the plugin
+that bakes the generators) and `recipes/` beside it. Put it somewhere you can
+write to, **not** in `C:\Program Files`.
+
+### Settings: the four paths
+
+This is the step people skip, and then nothing cooks.
+
+- **WorldForge project** — the folder above. Found on its own.
+- **Folder for generated addons** — where your maps get written. Put it next
+  to the WorldForge folder so the Workbench's `-addonsDir` finds them by
+  itself.
+- **Workbench executable** — press **Detect Steam**. Otherwise the path is
+  usually `C:\Program Files (x86)\Steam\steamapps\common\Arma Reforger Tools\Workbench\ArmaReforgerWorkbenchSteamDiag.exe`.
+  **If Steam is on another drive the factory path is wrong**, and this is by
+  far the #1 reason cooking fails.
+- **Base game addons** — normally
+  `C:\Program Files (x86)\Steam\steamapps\common\Arma Reforger\addons`.
+  Without it the Workbench dies with `Game addon '58D0FB3206B6F859' not found`.
+
+Press **Save paths**: the dots under *Environment status* turn green. The last
+two also work as the `AR_WB_EXE` and `AR_GAME_ADDONS` environment variables.
+
+### Check it all works
+
+**Start → Random map → Generate and build**, then **Cook**. The Workbench
+opens and closes on its own, once per step. Tick *Skip the navmesh* if you
+only want a look, and *Open the world when it finishes* so the World Editor
+opens on it. If that works end to end, everything is set up.
 
 ## Video guide
 
@@ -113,9 +163,19 @@ Minimal recipe:
 
 Spanish by default, English included. Auto from Windows, switch in Settings (restarts).
 
-## Support
+## Support the project
 
-Standard + real-site + `.wrp`. Needs `worldforge.lic` next to the `.exe`. To request it open a “Support” Issue.
+WorldForge is **free and complete**: everything above works and nothing is
+held back.
+
+If it saves you time and you want to keep it moving, **new and improved
+versions go to supporters first**:
+
+- ☕ **Ko-fi:** <https://ko-fi.com/arribas>
+- 💬 **Discord:** `alv4r0` — message me after donating and I'll send you the
+  new builds.
+
+No keys, no activation, no nagging.
 
 ## License
 

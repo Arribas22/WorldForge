@@ -21,7 +21,7 @@ From a JSON recipe to a Workbench-ready addon: baked terrain, properly-profiled 
 
 De la receta al addon, paso a paso. / From recipe to addon, step by step.
 
-**[⬇ Descargar en Releases](../../releases)** · **[🚀 Quickstart](#-3-pasos--3-steps)** · **[Standard vs Support](#-standard-vs-support)** · **[Recetas](#-recetas--templates)**
+**[⬇ Descargar en Releases](../../releases)** · **[🚀 Quickstart](#-3-pasos--3-steps)** · **[Todo incluido](#-todo-incluido--everything-included)** · **[Recetas](#-recetas--templates)**
 
 ---
 
@@ -39,22 +39,25 @@ De la receta al addon, paso a paso. / From recipe to addon, step by step.
 
 ---
 
-## 🔃 Standard vs Support
+## ✅ Todo incluido / Everything included
 
-| | Standard (este repo / this repo) | Support |
-|---|---|---|
-| Procedural ilimitado + 13 plantillas / Unlimited procedural + 13 templates | ✅ | ✅ |
-| Modo imagen (tu satelital → costa y arbolado) / Image mode | ✅ | ✅ |
-| Preview, Build, Cook, Preflight, Catálogo / Catalog | ✅ | ✅ |
-| **Mapa realista: eliges la zona y se calca / Real-site: pick area, it gets traced** | ❌ | ✅ |
-| Relieve Copernicus DEM / Elevation | — | ✅ |
-| Suelo ESA WorldCover / Ground cover | — | ✅ |
-| Carreteras, cauces y casas OSM / OSM roads, rivers, houses | — | ✅ |
-| Import Arma 3 `.wrp` | — | ✅ |
+**Gratis y completo. No hay versiones recortadas ni funciones bloqueadas.**
+**Free and complete. No cut-down edition, nothing locked.**
 
-### Standard — lo que haces aquí
+| | |
+|---|---|
+| Procedural ilimitado + 13 plantillas / Unlimited procedural + 13 templates | ✅ |
+| Modo imagen (tu satelital → costa y arbolado) / Image mode | ✅ |
+| Preview, Build, Cook, Preflight, Catálogo / Catalog | ✅ |
+| **Mapa realista: eliges la zona y se calca / Real-site: pick area, it gets traced** | ✅ |
+| Relieve Copernicus DEM / Elevation | ✅ |
+| Suelo ESA WorldCover / Ground cover | ✅ |
+| Carreteras, cauces y casas OSM / OSM roads, rivers, houses | ✅ |
+| Import Arma 3 `.wrp` | ✅ |
 
-![Standard](assets/images/standard-empezar.png)
+### Procedural — inventado desde la semilla
+
+![Procedural](assets/images/standard-empezar.png)
 
 - Empezar: aleatorio, plantilla, procedural a medida, desde tu imagen.
 - Start: random, template, custom procedural, from your image.
@@ -65,14 +68,14 @@ De la receta al addon, paso a paso. / From recipe to addon, step by step.
 *Editor de receta con Verdania cargada: cada campo con ayuda, comprobación en vivo y resumen de lo que va a salir.*
 *Recipe editor with Verdania loaded: every field with help, live validation and build summary.*
 
-### Support — calca un sitio real
+### Mapa realista — calca un sitio de verdad
 
-![Support](assets/images/support-mapa-realista.png)
+![Mapa realista](assets/images/support-mapa-realista.png)
 
 *Mapa realista: arrastra, zoom con rueda, cuadrado naranja = tu mapa 2×2–16×16 km → “Crear la receta y previsualizar”. Buscador + Everon, Fort Bragg, Alcalá de Henares, Normandía, Kyiv.*
 *Realistic map: drag, wheel-zoom, orange square = your 2×2–16×16 km map → “Create recipe and preview”. Search + shortcuts.*
 
-Calca / Traces: Copernicus DEM + ESA WorldCover + OSM (carreteras, cauces, usos, **~10.000 casas en 8 km con planta y giro reales**). En Standard esta pantalla muestra cartel Support y te manda a plantillas.
+Calca / Traces: Copernicus DEM + ESA WorldCover + OSM (carreteras, cauces, usos, **~10.000 casas en 8 km con planta y giro reales**).
 
 ---
 
@@ -137,8 +140,17 @@ Requisitos / Requirements: Windows 10/11 64-bit · Arma Reforger Tools + juego /
 
 ## ❓ FAQ
 
-**¿Standard es demo? / Is Standard a demo?**
-No. Mapas completos y jugables. Support solo añade sitio real + `.wrp`. / No. Full playable maps. Support only adds real-site + `.wrp`.
+**¿Necesito Python? / Do I need Python?**
+No. El `.exe` lleva dentro su propio Python, numpy, scipy y Tk. Descomprimir y doble clic. / No. The `.exe` carries its own Python, numpy, scipy and Tk. Unzip and double-click.
+
+**No encuentra el Workbench / It can't find the Workbench**
+Ajustes → *Ejecutable del Workbench* → **Detectar Steam**. **Si Steam está en otra unidad la ruta de fábrica no vale** y hay que buscarlo a mano; es la causa nº 1 de que no cocine. Y comprueba que las **Arma Reforger Tools** están instaladas: son una entrada **aparte** del juego en Steam. / Settings → *Workbench executable* → **Detect Steam**. **If Steam is on another drive the factory path is wrong** — browse to it; this is the #1 reason cooking fails. And check the **Arma Reforger Tools** are installed: they are a **separate** Steam entry from the game.
+
+**Sale `Game addon '58D0FB3206B6F859' not found`**
+La carpeta de addons del juego, en Ajustes, está mal o vacía. / The game addons folder in Settings is wrong or empty.
+
+**El mapa sale sin tendidos, muros ni aceras / No power lines, walls or pavements**
+Estás ejecutando el `.exe` fuera de su carpeta y no encuentra `WorldForgeTools/`. Pasa `WorldForge.exe --diag`. / You are running the `.exe` outside its folder, so it can't find `WorldForgeTools/`. Run `WorldForge.exe --diag`.
 
 **¿Nieve? / Snow?**
 Reforger 1.8 no trae superficie de nieve. Alta montaña = roca. / No snow surface in 1.8. High mountain = rock.
@@ -147,12 +159,20 @@ Reforger 1.8 no trae superficie de nieve. Alta montaña = roca. / No snow surfac
 No. El agua es infranqueable para el trazado (a propósito). / No. Water is untraversable by design.
 
 **¿Idioma? / Language?**
-ES por defecto + EN. Auto desde Windows, en Ajustes (relanza). / ES default + EN. Auto from Windows, in Settings (restarts).
+ES por defecto + EN. Auto desde Windows, en Ajustes (relanza). Puedes añadir el tuyo copiando `locales/en.json`. / ES default + EN. Auto from Windows, in Settings (restarts). Add your own by copying `locales/en.json`.
 
-## 💎 Support
+## ☕ Apoyar el proyecto / Support the project
 
-Standard + sitio real + `.wrp`. Pide `worldforge.lic` junto al `.exe`. ¿Lo quieres? Abre un Issue “Support”.
-Standard + real-site + `.wrp`. Needs `worldforge.lic` next to `.exe`. Want it? Open a “Support” Issue.
+WorldForge es **gratis y completo**: todo lo de arriba funciona y no se guarda nada.
+WorldForge is **free and complete**: everything above works, nothing is held back.
+
+Si te ahorra tiempo y quieres que siga adelante, **las versiones nuevas y mejoradas van antes a quien lo apoya**:
+If it saves you time and you want to keep it moving, **new and improved versions go to supporters first**:
+
+- ☕ **Ko-fi:** <https://ko-fi.com/arribas>
+- 💬 **Discord:** `alv4r0` — escríbeme después de donar y te paso las versiones nuevas. / message me after donating and I'll send you the new builds.
+
+Sin claves, sin activación y sin dar la lata. / No keys, no activation, no nagging.
 
 ## 📁 Repo
 
