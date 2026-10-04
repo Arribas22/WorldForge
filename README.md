@@ -1,8 +1,8 @@
-![WorldForge Standard](assets/images/hero-banner.png)
+![WorldForge](assets/images/hero-banner.png)
 
 [![Windows](https://img.shields.io/badge/Windows-10%2F11-blue)](https://github.com/) [![Arma Reforger](https://img.shields.io/badge/Arma-Reforger-orange)](https://reforger.armaplatform.com/) [![ES](https://img.shields.io/badge/lang-ES-green)](README.es.md) [![EN](https://img.shields.io/badge/lang-EN-green)](README.en.md) [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
-# WorldForge Standard
+# WorldForge
 
 > **Genera mundos completos y jugables para Arma Reforger. Procedural ilimitado, gratis.**
 > **Generate complete, playable Arma Reforger worlds. Unlimited procedural, free.**
@@ -152,7 +152,7 @@ Detalle de campos: [docs/PLANTILLAS.md](docs/PLANTILLAS.md) ([EN](docs/TEMPLATES
 
 ## ⬇ Descarga / Download
 
-En **[Releases](../../releases)**: carpeta completa `WorldForge-Standard` (`WorldForge.exe` + `WorldForgeTools/` + `recipes/` + `locales/` + `docs/`). El `.exe` suelto no basta.
+En **[Releases](../../releases)**: carpeta completa `WorldForge` (`WorldForge.exe` + `WorldForgeTools/` + `recipes/` + `locales/` + `docs/`). El `.exe` suelto no basta.
 
 From **[Releases](../../releases)**: full folder. Lone `.exe` is not enough.
 

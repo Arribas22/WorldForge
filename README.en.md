@@ -1,6 +1,6 @@
-# WorldForge Standard — Arma Reforger map generator
+# WorldForge — Arma Reforger world generator
 
-> Standard edition: unlimited **procedural** maps. Support adds real-site tracing from a map (see below).
+> Unlimited **procedural** maps and tracing of real places on Earth. Free and complete.
 
 ## ▶ Your first map in 3 minutes
 

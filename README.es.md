@@ -1,6 +1,6 @@
-# WorldForge Standard — generador de mapas para Arma Reforger
+# WorldForge — generador de mundos para Arma Reforger
 
-> Versión Standard: mapas procedurales **sin límites**. La versión Support añade calcar sitios reales desde un mapa (ver abajo).
+> Mapas procedurales **sin límites** y calcado de sitios reales del planeta. Gratis y completo.
 
 ## ▶ Tu primer mapa en 3 minutos
 

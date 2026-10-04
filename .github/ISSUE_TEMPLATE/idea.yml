@@ -1,0 +1,17 @@
+---
+name: Idea / Sugerencia
+about: Something WorldForge could do and doesn't / Algo que WorldForge podria hacer y no hace
+labels: idea
+---
+<!-- Cuenta QUE quieres conseguir, no como crees que deberia hacerse: casi
+     siempre hay un camino mas corto. / Say WHAT you want to achieve, not how
+     you think it should be done: there is usually a shorter path. -->
+
+**Qué quiero conseguir / What I want to achieve:**
+
+**Cómo lo hago hoy (si es que se puede) / How I do it today (if at all):**
+
+**Mapa de ejemplo o receta / Example map or recipe:**
+```json
+{}
+```
