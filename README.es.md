@@ -153,6 +153,68 @@ Receta mínima:
 
 `--set` sobrescribe sin tocar el fichero: `--set seed=42 --set relief=mountainous`.
 
+## Portar un mapa de Arma 3
+
+Si tienes un mundo de Arma 3, WorldForge lo reconstruye en Reforger. Son tres
+piezas independientes y puedes usar las que quieras:
+
+| En la receta | Qué trae del original |
+|---|---|
+| `heightmap.wrp` | **El relieve.** Se lee del `.wrp` tal cual. Si el mapa de Arma 3 mide lo mismo que el tuyo es 1:1 y no hay maqueta. |
+| `objects_wrp` | **Los viales y los edificios**, en sus posiciones reales. En Jackson County: 2.203 piezas de calzada encadenadas en 88 trazados y 855 edificios. |
+| `places_file` | **Los pueblos**, del `class Names` del `.hpp`: nombre, posición, radio y tamaño. En Jackson County, 40 sitios con nombre. |
+
+```json
+{
+  "name": "JacksonCounty", "size_m": 10240, "cell_size": 2.0,
+  "heightmap":   { "wrp": "C:/.../Jackson_County.wrp" },
+  "objects_wrp":        "C:/.../Jackson_County.wrp",
+  "places_file":        "C:/.../Jackson_County.hpp"
+}
+```
+
+Lo que **no** viene del original se sigue generando: bosques, vallas, tendido
+eléctrico y el resto. Y si el mapa original tiene zonas incomunicadas, con
+`road_links` le añades las carreteras que le faltan (abajo).
+
+> El radio que trae un `.hpp` describe la **etiqueta** del sitio en el mapa,
+> no su casco urbano, y suele quedar generoso: salen pueblos de 500 m donde
+> hay una aldea. `settlement_radius_scale` a 0.6–0.8 lo deja en su sitio.
+
+## Escala vertical: la trampa de los mapas reales
+
+**Esto arruina mapas y no da ningún error.** Si el recuadro real que marcas
+mide 245 km y tu mapa mide 12,8, lo horizontal se encoge 19 veces. Si la
+altura no se encoge igual, **todas las pendientes salen multiplicadas por
+19**: el mapa es precioso en el editor y no se puede conducir.
+
+Lo arregla `heightmap.height_scale`. No hace falta calcularlo a mano: en
+*Mapa realista* pulsa **Calcular la escala recomendada** y lo pone. Entre 3 y
+4 veces de exageración es lo que deja un mapa comprimido que se lee bien y se
+conduce; 1.0 es la altura real y solo vale si el recuadro mide lo mismo que
+tu mapa.
+
+## Más cosas que sabe hacer
+
+**Atlas multi-región.** Un mapa puede componerse de varios recuadros reales
+colocados en sitios concretos, cada uno con su propia escala vertical. Es
+como está hecha la receta de España (península, Baleares y Canarias en un
+solo mapa de 12,8 km) y la de México.
+
+**Trazados exactos.** `road_paths` tiende una carretera tal cual, sin trazador
+ni A\*. Es lo que necesita un circuito: para el Nürburgring la geometría **es**
+el producto y no la puede elegir un algoritmo.
+
+**Enlaces de carretera.** `road_links` añade las carreteras que el mapa no
+tiene y hacen falta para recorrerlo. Cada entrada es un recorrido: nombres de
+sitios o pares `x, z`. En un archipiélago, `road_links_water` con un coste
+caro (150 va bien) hace que el trazador cruce por el estrecho más angosto en
+vez de dejar cada isla con su red suelta.
+
+**Pueblos de verdad.** Las casas se orientan a la calle, llevan valla de
+parcela (el 61% en Everon, medido) y trastos en el patio; los puertos salen
+junto a los núcleos costeros y el tendido eléctrico sigue los viales.
+
 ## Documentación
 
 - `docs/PLANTILLAS.md` — las 13 plantillas + tabla de campos.

@@ -79,6 +79,26 @@ Calca / Traces: Copernicus DEM + ESA WorldCover + OSM (carreteras, cauces, usos,
 
 ---
 
+## 🔁 Portar un mapa de Arma 3 / Porting an Arma 3 map
+
+Tres piezas independientes, usa las que quieras. / Three independent pieces, use whichever you want.
+
+| En la receta / In the recipe | Qué trae / What it brings |
+|---|---|
+| `heightmap.wrp` | **El relieve** del `.wrp`. / **The relief** from the `.wrp`. |
+| `objects_wrp` | **Viales y edificios** en sus posiciones reales (Jackson County: 2.203 piezas de calzada → 88 trazados, 855 edificios). / **Roads and buildings** in their real positions. |
+| `places_file` | **Los pueblos** del `class Names` del `.hpp`: nombre, posición, radio (40 en Jackson County). / **The settlements** from the `.hpp`. |
+
+Lo que no viene del original se genera igual: bosques, vallas, tendido eléctrico.
+Whatever doesn't come from the original is still generated: forests, fences, power lines.
+
+> ⚠️ **Escala vertical / Vertical scale.** Si el recuadro real mide 245 km y tu mapa 12,8, lo horizontal se encoge 19 veces y **sin corregir la altura todas las pendientes se multiplican por 19** — el mapa no se puede conducir y no da ningún error. En *Mapa realista* → **Calcular la escala recomendada**.
+> If the real box is 245 km and your map 12.8, the horizontal shrinks 19× and **without correcting the height every slope is multiplied by 19** — undrivable, with no error. In *Realistic map* → **Work out the recommended scale**.
+
+Más / More: atlas multi-región (España, México), trazados exactos para circuitos (`road_paths`, Nürburgring), enlaces de carretera y cruces de agua (`road_links`). Ver **[ES](README.es.md)** · **[EN](README.en.md)**.
+
+---
+
 ## ▶ Video guía / Video guide
 
 🇪🇸 Generación completa del mapa `test` (Verdania, 8 km): de la receta al addon listo para Workbench.

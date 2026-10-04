@@ -153,6 +153,68 @@ Minimal recipe:
 
 `--set` overrides without editing: `--set seed=42 --set relief=mountainous`.
 
+## Porting an Arma 3 map
+
+If you have an Arma 3 world, WorldForge rebuilds it in Reforger. It is three
+independent pieces and you can use whichever you want:
+
+| In the recipe | What it brings from the original |
+|---|---|
+| `heightmap.wrp` | **The relief.** Read straight from the `.wrp`. If the Arma 3 map is the same size as yours it is 1:1, no scale model. |
+| `objects_wrp` | **The roads and the buildings**, in their real positions. On Jackson County: 2,203 roadway pieces chained into 88 paths, and 855 buildings. |
+| `places_file` | **The settlements**, from the `.hpp` `class Names`: name, position, radius and size. On Jackson County, 40 named places. |
+
+```json
+{
+  "name": "JacksonCounty", "size_m": 10240, "cell_size": 2.0,
+  "heightmap":   { "wrp": "C:/.../Jackson_County.wrp" },
+  "objects_wrp":        "C:/.../Jackson_County.wrp",
+  "places_file":        "C:/.../Jackson_County.hpp"
+}
+```
+
+Whatever does **not** come from the original is still generated: forests,
+fences, power lines and the rest. And if the original map has unreachable
+areas, `road_links` adds the roads it is missing (below).
+
+> The radius in an `.hpp` describes the **label** of the place on the map, not
+> its built-up area, and tends to be generous: you get 500 m towns where
+> there is a hamlet. `settlement_radius_scale` at 0.6–0.8 puts it back.
+
+## Vertical scale: the trap of real-world maps
+
+**This ruins maps and gives no error at all.** If the real box you mark is
+245 km across and your map is 12.8, the horizontal shrinks 19 times. If the
+height does not shrink with it, **every slope comes out multiplied by 19**:
+the map looks great in the editor and cannot be driven.
+
+`heightmap.height_scale` fixes it. You do not have to work it out: in
+*Realistic map* press **Work out the recommended scale** and it fills it in.
+Three to four times of exaggeration is what leaves a compressed map that
+reads well and drives well; 1.0 is the real height and only makes sense if
+the box is the same size as your map.
+
+## More things it does
+
+**Multi-region atlas.** One map can be made of several real boxes placed at
+specific spots, each with its own vertical scale. That is how the Spain
+recipe is built (mainland, Balearics and Canaries in a single 12.8 km map),
+and the Mexico one.
+
+**Exact paths.** `road_paths` lays a road down as given, with no router and no
+A\*. That is what a circuit needs: for the Nürburgring the geometry **is** the
+product and no algorithm gets to choose it.
+
+**Road links.** `road_links` adds the roads the map does not have and needs to
+be driveable. Each entry is a route: place names or `x, z` pairs. On an
+archipelago, `road_links_water` with a steep cost (150 works well) makes the
+router cross at the narrowest strait instead of leaving each island with its
+own loose network.
+
+**Real villages.** Houses face the street, carry a plot fence (61% on Everon,
+measured) and clutter in the yard; harbours appear next to coastal
+settlements and power lines follow the roads.
+
 ## Docs
 
 - `docs/TEMPLATES.md` — 13 templates + field table.
